@@ -1,10 +1,10 @@
 import { BrowserRouter } from 'react-router-dom';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import Home from "./Sections/Home"
+import Theme from './Components/Theme';
 import AboutMe from "./Sections/AboutMe"
 import Projects from "./Sections/Projects"
 import ContactMe from "./Sections/ContactMe"
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
-import { MoonIcon } from '@chakra-ui/icons'
 
 const colors = {
   brand: {
@@ -19,14 +19,14 @@ const theme = extendTheme({ colors })
 function App() {
   return (
     <ChakraProvider theme={theme}>
-    <BrowserRouter>
-    <MoonIcon/>
-				<Home />	
-        <AboutMe />	
-        <Projects />	
-        <ContactMe />	
-			</BrowserRouter>
-      </ChakraProvider>
+      <BrowserRouter>
+        <Theme />
+        <Home />
+        <AboutMe />
+        <Projects />
+        <ContactMe />
+      </BrowserRouter>
+    </ChakraProvider>
   );
 }
 
