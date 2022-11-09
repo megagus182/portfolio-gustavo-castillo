@@ -1,11 +1,12 @@
 import { Box } from "@chakra-ui/react";
 import { Image } from '@chakra-ui/react';
-import perfil from "../images/ejemplo.png"
+import { blue } from "@mui/material/colors";
+import perfil from "../images/CompletoSinFondo.png"
 
 export default function Home() {
     return (
-      <Box width={"100%"}  display={"flex"} className="Home">
-        <Box width={"50%"} className="leftSideFromHome">
+      <Box width={"100%"} heigh={"100vh"}  display={"flex"} className="Home">
+        <Box width={"50%"} backgroundColor={"blue"} className="leftSideFromHome">
 
 
 
@@ -14,8 +15,8 @@ export default function Home() {
 
 
         </Box>
-        <Box width={"50%"} className="rightSideFromHome">
-          <Image src={perfil} alt="imgPerfil" />
+        <Box  width={"50%"} className="rightSideFromHome">
+          <Image width={"fit-content"} src={perfil} alt="imgPerfil" />
         </Box>
       </Box>
     );
