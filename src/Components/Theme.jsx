@@ -5,7 +5,7 @@ import { MoonIcon } from '@chakra-ui/icons'
 export default function Theme() {
     const { colorMode, toggleColorMode } = useColorMode()
     return (
-      <Box position={"fixed"} right="8" top="5">
+      <Box zIndex={1} position={"fixed"} right="8" top="5">
         <Button onClick={toggleColorMode}>
         <MoonIcon /> 
         {colorMode === 'light' ? 'Dark' : 'Light'} Mode
