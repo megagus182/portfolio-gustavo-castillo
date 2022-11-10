@@ -1,8 +1,11 @@
-import { Box, Heading, Text, Image, Highlight } from "@chakra-ui/react";
+import { Box, Heading, Image, Highlight, SimpleGrid } from "@chakra-ui/react";
 import Food from "../images/CapturaFood.PNG";
 import Food2 from "../images/CapturaFood2.PNG";
 import Food3 from "../images/CapturaFood3.PNG";
 import Food4 from "../images/CapturaFood4.PNG";
+import laptop from "../images/laptop.PNG";
+// import game from "../images/CapturaGameScript.PNG";
+// import game1 from "../images/CapturaGameScript1.PNG";
 
 export default function Projects() {
   return (
@@ -22,24 +25,21 @@ export default function Projects() {
           GameScript
         </Highlight>
       </Heading>
-      <Text> GameScript</Text>
+      <br></br>
+      <SimpleGrid columns={1} spacing={10}>
+        <Box bg="tomato" height="auto">
+          <Image
+           zIndex={1}
+            height={"fit-content"}
+            width={"auto"}
+            src={laptop}
+            alt="laptop"
+          />
+          CARRUSEL
+        </Box>
+      </SimpleGrid>
 
-      <section width= {"1920px"}
-  height= "1080px"
-
-  display= "grid"
-  grid-template-rows= "repeat(2, 1fr)"
-  grid-template-columns= "repeat(3, 1fr)"
-  gap= "8px" class="layout">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-      </section>
-
-      <Heading as="h2" size="lg">
+      <Heading margin={"20px"} as="h2" size="lg">
         <Highlight
           query={["FoodApp"]}
           styles={{ px: "2", py: "1", rounded: "full", bg: "teal.400" }}
@@ -47,6 +47,14 @@ export default function Projects() {
           FoodApp
         </Highlight>
       </Heading>
+      <Box bg="tomato" height="auto">
+          <Image
+            height={"fit-content"}
+            width={"auto"}
+            src={laptop}
+            alt="laptop"
+          />
+        </Box>
       <Image height={"fit-content"} width={"auto"} src={Food} alt="Food1" />
       <Image height={"fit-content"} width={"auto"} src={Food2} alt="Food2" />
       <Image height={"fit-content"} width={"auto"} src={Food3} alt="Food3" />
