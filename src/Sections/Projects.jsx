@@ -3,7 +3,6 @@ import Food from "../images/CapturaFood.PNG";
 import Food2 from "../images/CapturaFood2.PNG";
 import Food3 from "../images/CapturaFood3.PNG";
 import Food4 from "../images/CapturaFood4.PNG";
-import laptop from "../images/laptop.PNG";
 // import game from "../images/CapturaGameScript.PNG";
 // import game1 from "../images/CapturaGameScript1.PNG";
 
@@ -15,7 +14,7 @@ export default function Projects() {
       alignItems={"center"}
       className="Projects"
     >
-      <Heading marginTop={"20px"}>These are some of my projects</Heading>
+      <Heading marginTop={"20px"}>Here are a few projects I've worked on recently.</Heading>
       <br></br>
       <Heading as="h2" size="lg">
         <Highlight
@@ -28,13 +27,7 @@ export default function Projects() {
       <br></br>
       <SimpleGrid columns={1} spacing={10}>
         <Box bg="tomato" height="auto">
-          <Image
-           zIndex={1}
-            height={"fit-content"}
-            width={"auto"}
-            src={laptop}
-            alt="laptop"
-          />
+         
           CARRUSEL
         </Box>
       </SimpleGrid>
@@ -48,12 +41,7 @@ export default function Projects() {
         </Highlight>
       </Heading>
       <Box bg="tomato" height="auto">
-          <Image
-            height={"fit-content"}
-            width={"auto"}
-            src={laptop}
-            alt="laptop"
-          />
+     
         </Box>
       <Image height={"fit-content"} width={"auto"} src={Food} alt="Food1" />
       <Image height={"fit-content"} width={"auto"} src={Food2} alt="Food2" />

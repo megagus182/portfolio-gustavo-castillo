@@ -89,7 +89,7 @@ export default function Home() {
       {/* RIGHT */}
       <Box width={"50%"} className="rightSideFromHome">
         <Box
-          backgroundColor={"red.600"}
+          backgroundColor={"blue.600"}
           clipPath="polygon(25% 0%, 100% 0, 75% 100%, 0% 100%);"
         >
           <Image width={"fit-content"} src={perfil} alt="imgPerfil" />
