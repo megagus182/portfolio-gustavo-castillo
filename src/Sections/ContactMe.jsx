@@ -18,7 +18,13 @@ import {
 export default function ContactMe() {
   const [input, setInput] = useState("");
   const handleInputChange = (e) => setInput(e.target.value);
-  const isError = input === "";
+  const [inputName, setInputName] = useState("");
+  const handleInputNameChange = (e) => setInputName(e.target.value);
+  const [inputMessage, setInputMessage] = useState("");
+  const handleInputMessageChange = (e) => setInputMessage(e.target.value);
+  const isEmailError = input === "";
+  const isNameError = inputName === "";
+  const isMessageError = inputMessage === "";
   const form = useRef();
   const toast = useToast()
 
@@ -125,9 +131,16 @@ export default function ContactMe() {
             <form ref={form} onSubmit={sendEmail}>
               <FormControl>
                 <FormLabel>Name</FormLabel>
-                <Input type="text" placeholder="Name" name="from_name" />
+                <Input type="text" placeholder="Name" name="from_name" value={inputName}
+                  onChange={handleInputNameChange}/>
+                {!isNameError ? (
                 <FormHelperText>Enter your Name please.</FormHelperText>
-                <FormLabel>Email</FormLabel>
+                ) : (
+                  <FormHelperText color={"red"}>
+                  Name is required.
+                </FormHelperText>
+              )}
+              <FormLabel>Email</FormLabel>
                 <Input
                   type="email"
                   placeholder="Email"
@@ -135,7 +148,7 @@ export default function ContactMe() {
                   value={input}
                   onChange={handleInputChange}
                 />
-                {!isError ? (
+                {!isEmailError ? (
                   <FormHelperText>
                     Enter the email you'd like to receive the answer.
                   </FormHelperText>
@@ -150,10 +163,18 @@ export default function ContactMe() {
                   height={"20"}
                   name="message"
                   placeholder="Message"
+                  value={inputMessage}
+                  onChange={handleInputMessageChange}
                 />
+                {!isMessageError ? (
                 <FormHelperText>
                   Please write a message to contact me.
                 </FormHelperText>
+                 ) : (
+                  <FormHelperText color={"red"}>
+                  Message is required.
+                </FormHelperText>
+              )}
                 <br></br>
                 <Button type="submit">Submit</Button>
               </FormControl>
