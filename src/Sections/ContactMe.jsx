@@ -9,6 +9,7 @@ import emailjs from "emailjs-com";
 import {
   FormControl,
   FormLabel,
+  useToast,
   Input,
   Textarea,
   FormHelperText,
@@ -19,6 +20,7 @@ export default function ContactMe() {
   const handleInputChange = (e) => setInput(e.target.value);
   const isError = input === "";
   const form = useRef();
+  const toast = useToast()
 
   function sendEmail(e) {
     e.preventDefault();
@@ -30,8 +32,14 @@ export default function ContactMe() {
         "UoL2za3bsCOGDob5k"
       )
       .then((res) => {
-        alert("your email has send, thank you for contact me");
-        console.log(res);
+        
+        toast({
+          title: 'Your email has send.',
+          description: "Thank you for contact me!",
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        })
       });
   }
 
