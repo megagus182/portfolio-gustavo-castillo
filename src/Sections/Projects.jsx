@@ -9,6 +9,8 @@ import {
   Tabs,
   TabPanels,
   Tab,
+  Text,
+  List,
 } from "@chakra-ui/react";
 import Food from "../images/Food1.PNG";
 import Food2 from "../images/Food2.PNG";
@@ -47,23 +49,39 @@ export default function Projects() {
         >
           GameScript
         </Highlight>
-      </Heading >
-      <Heading as="h2" size="sm">
-      Academic experience consisting of 3 weeks of intense work on research and application of new technologies, under the agile SCRUM methodology, with all the established guidelines and objectives, such as:
-- User administration, password management.
-- Administration of shopping cart and product orders.
-- View list of products, filter by category, price, rating, search for a specific one, add or remove from favorites, or to the shopping cart.
-- Review purchased products, or ask questions about a specific product.
-- Send transactional emails
-- Modify profile information
-- Deploy, both FrontEnd and BackEnd
       </Heading>
+      <Text
+        justifyContent={"center"}
+        textAlign={"justify"}
+        width={"90%"}
+        fontSize="md"
+      >
+        Academic experience consisting of 3 weeks of intense work on research
+        and application of new technologies, under the agile SCRUM methodology,
+        with all the established guidelines and objectives, such as:
+        <List>
+          <li>- User administration, password management.</li>
+          <li>- Administration of shopping cart and product orders.</li>
+          <li>
+            - View list of products, filter by category, price, rating, search
+            for a specific one, add or remove from favorites, or to the shopping
+            cart.
+          </li>
+          <li>
+            - Review purchased products, or ask questions about a specific
+            product.
+          </li>
+          <li>- Send transactional emails</li>
+          <li>- Modify profile information</li>
+          <li>- Deploy, both FrontEnd and BackEnd</li>
+        </List>
+      </Text>
       <br></br>
       <SimpleGrid columns={1} spacing={10}>
-        <Box  height="auto">
-          <Tabs  defaultIndex={1}>
-            <TabPanels textAlign={"-webkit-center"} >
-              <TabPanel >
+        <Box height="auto">
+          <Tabs defaultIndex={1}>
+            <TabPanels textAlign={"-webkit-center"}>
+              <TabPanel>
                 <Image width={"680px"} fit="cover" src={game} />
               </TabPanel>
               <TabPanel>
@@ -95,17 +113,17 @@ export default function Projects() {
               </TabPanel>
             </TabPanels>
 
-            <TabList>
-              <Tab>LandingPage</Tab>
-              <Tab>Home</Tab>
-              <Tab>Detail</Tab>
-              <Tab>Questions</Tab>
-              <Tab>WishList</Tab>
-              <Tab>Cart</Tab>
-              <Tab>CheckOut</Tab>
-              <Tab>Profile</Tab>
-              <Tab>DarkMode</Tab>
-              <Tab>Footer</Tab>
+            <TabList width={"50%"}>
+              <Tab width={"30%"}>Landing</Tab>
+              <Tab width={"30%"}>Home</Tab>
+              <Tab width={"30%"}>Detail</Tab>
+              <Tab width={"30%"}>Questions</Tab>
+              <Tab width={"30%"}>WishList</Tab>
+              <Tab width={"30%"}>Cart</Tab>
+              <Tab width={"30%"}>CheckOut</Tab>
+              <Tab width={"30%"}>Profile</Tab>
+              <Tab width={"30%"}>DarkMode</Tab>
+              <Tab width={"30%"}>Footer</Tab>
             </TabList>
           </Tabs>
         </Box>
@@ -119,6 +137,31 @@ export default function Projects() {
           FoodApp
         </Highlight>
       </Heading>
+      <Text
+        justifyContent={"center"}
+        textAlign={"justify"}
+        width={"90%"}
+        fontSize="md"
+      >
+        FoddApp is a (SPA) developed on my own as part of a 3-week challenge at
+        Henry Bootcamp.
+        <List>
+        <li>
+          - I used React for the FrontEnd and Redux for state management. All
+          components were developed with pure CSS.
+        </li>
+        <li>
+          - The SPA consumes data from the "Spoonacular" API through a backend
+          developed in Node JS, using Express.
+        </li>
+        <li>- For the database I used PostgreSQL and Sequelize as ORM.</li>
+        <li>
+          - The project includes functionalities such as sorting, filtering,
+          paging, a search entry, cards to view details of the selected recipe,
+          and allows to create a recipe through a controlled form.
+        </li>
+        </List>
+      </Text>
       <Box bg="tomato" height="auto"></Box>
       <Box height="auto">
         <Tabs defaultIndex={1}>
@@ -146,14 +189,14 @@ export default function Projects() {
             </TabPanel>
           </TabPanels>
           <TabList>
-              <Tab>LandingPage</Tab>
-              <Tab>Home</Tab>
-              <Tab>Detail</Tab>
-              <Tab>Filter</Tab>
-              <Tab>Create a Recipe</Tab>
-              <Tab>Create Success</Tab>
-              <Tab>Detail of Recipe created</Tab>
-            </TabList>
+            <Tab>LandingPage</Tab>
+            <Tab>Home</Tab>
+            <Tab>Detail</Tab>
+            <Tab>Filter</Tab>
+            <Tab>Create a Recipe</Tab>
+            <Tab>Create Success</Tab>
+            <Tab>Detail of Recipe created</Tab>
+          </TabList>
         </Tabs>
       </Box>
     </Box>

@@ -3,13 +3,14 @@ import experience from "../images/experience.png";
 
 export default function AboutMe() {
   return (
+    <Box>
     <Box display={"flex"} className="AboutMe">
       {/* Left */}
-      <Box width={"50%"} className="LeftSide">
+      <Box width={"40%"} alignSelf={"center"} className="LeftSide">
        <Image src={experience} alt="experiences" />
       </Box>
       {/* Right */}
-      <Box width={"50%"}  padding={"30px"} justifyContent={"center"} textAlign={"justify"} className="RighttSide">
+      <Box width={"80%"}  padding={"30px"} paddingBottom={"0px"} justifyContent={"center"} textAlign={"justify"} className="RighttSide">
       <Heading marginTop={"20px"} as="h2" size="lg">
         About Me
       </Heading>
@@ -30,6 +31,10 @@ export default function AboutMe() {
         many more. 
         </Text>
         <br></br>
+        </Box>
+        </Box>
+        <Box width={"100%"}  padding={"30px"} paddingTop={"0px"} justifyContent={"center"} textAlign={"justify"} >
+
         <Text width={"90%"} fontSize="md">
         Now that I gave myself a chance, I took the intensive
         bootcamp of Henry📚, to update and retake what I like, the ⌨programming
@@ -45,8 +50,8 @@ export default function AboutMe() {
         | Netlify |. 
         </Text>
         <br></br>
-      </Box>
-      
-    </Box>
+        </Box>
+        </Box>
+    
   );
 }
