@@ -40,20 +40,30 @@ export default function Projects() {
         Here are a few projects I've worked on recently.
       </Heading>
       <br></br>
-      <Heading as="h2" size="lg">
+      <Heading as="h2" margin={"20px"} size="lg">
         <Highlight
           query={["GameScript"]}
           styles={{ px: "2", py: "1", rounded: "full", bg: "teal.400" }}
         >
           GameScript
         </Highlight>
+      </Heading >
+      <Heading as="h2" size="sm">
+      Academic experience consisting of 3 weeks of intense work on research and application of new technologies, under the agile SCRUM methodology, with all the established guidelines and objectives, such as:
+- User administration, password management.
+- Administration of shopping cart and product orders.
+- View list of products, filter by category, price, rating, search for a specific one, add or remove from favorites, or to the shopping cart.
+- Review purchased products, or ask questions about a specific product.
+- Send transactional emails
+- Modify profile information
+- Deploy, both FrontEnd and BackEnd
       </Heading>
       <br></br>
       <SimpleGrid columns={1} spacing={10}>
-        <Box height="auto">
-          <Tabs defaultIndex={1}>
-            <TabPanels>
-              <TabPanel>
+        <Box  height="auto">
+          <Tabs  defaultIndex={1}>
+            <TabPanels textAlign={"-webkit-center"} >
+              <TabPanel >
                 <Image width={"680px"} fit="cover" src={game} />
               </TabPanel>
               <TabPanel>
@@ -101,7 +111,7 @@ export default function Projects() {
         </Box>
       </SimpleGrid>
 
-      <Heading margin={"20px"} as="h2" size="lg">
+      <Heading margin={"20px"} marginTop={"40px"} as="h2" size="lg">
         <Highlight
           query={["FoodApp"]}
           styles={{ px: "2", py: "1", rounded: "full", bg: "teal.400" }}
@@ -112,7 +122,7 @@ export default function Projects() {
       <Box bg="tomato" height="auto"></Box>
       <Box height="auto">
         <Tabs defaultIndex={1}>
-          <TabPanels>
+          <TabPanels textAlign={"-webkit-center"}>
             <TabPanel>
               <Image width={"680px"} fit="cover" src={Food} />
             </TabPanel>
