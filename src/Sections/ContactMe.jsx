@@ -176,7 +176,11 @@ export default function ContactMe() {
                 </FormHelperText>
               )}
                 <br></br>
+                {!isEmailError && !isNameError && !isMessageError ? (
                 <Button type="submit">Submit</Button>
+                ):(
+                  null
+                )}
               </FormControl>
             </form>
           </Box>
