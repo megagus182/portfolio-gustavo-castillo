@@ -47,7 +47,7 @@ export default function AboutMe() {
       //TAMAÑO
       <Box display={"flex"} flexDirection={"column"} className="AboutMe">
         {/* Left */}
-        <Box width={"40%"} alignSelf={"center"} className="LeftSide">
+        <Box width={"100%"} alignSelf={"center"} className="LeftSide">
           <Image src={experience} alt="experiences" />
         </Box>
         {/* Right */}
@@ -55,6 +55,7 @@ export default function AboutMe() {
           width={"100%"}
           padding={"30px"}
           paddingBottom={"0px"}
+          paddingTop={"0px"}
           justifyContent={"center"}
           textAlign={"justify"}
           className="RighttSide"
@@ -63,7 +64,7 @@ export default function AboutMe() {
             About Me
           </Heading>
           <br></br>
-          <Text width={"90%"} fontSize="sm">
+          <Text width={"90%"} fontSize="md">
             I've always been interested in the world of technology since I was
             little, since I always had a fascination for video games🕹 and
             computers💾, so since high school I took computer courses, in high
@@ -71,7 +72,7 @@ export default function AboutMe() {
             Systems Engineering.
           </Text>
           <br></br>
-          <Text width={"90%"} fontSize="sm">
+          <Text width={"90%"} fontSize="md">
             Due to economic situations and lack of opportunities at that time
             🤔, I had to work in other areas outside of mine, such as logistics
             and transportation 🚛 in which, I could develop many Soft Skills,

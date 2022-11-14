@@ -38,7 +38,7 @@ export default function Projects() {
       alignItems={"center"}
       className="Projects"
     >
-      <Heading marginTop={"20px"}>
+      <Heading textAlign={"center"} marginTop={"20px"}>
         Here are a few projects I've worked on recently.
       </Heading>
       <br></br>
