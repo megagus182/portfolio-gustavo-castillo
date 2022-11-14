@@ -171,16 +171,16 @@ export default function Projects() {
             </TabPanels>
 
             <TabList width={"100%"}>
-              <Tab width={"18%"}>1</Tab>
-              <Tab width={"18%"}>2</Tab>
-              <Tab width={"18%"}>3</Tab>
-              <Tab width={"18%"}>4</Tab>
-              <Tab width={"18%"}>5</Tab>
-              <Tab width={"18%"}>6</Tab>
-              <Tab width={"18%"}>7</Tab>
-              <Tab width={"18%"}>8</Tab>
-              <Tab width={"18%"}>9</Tab>
-              <Tab width={"18%"}>10</Tab>
+              <Tab padding={1.5} width={"10%"}>1</Tab>
+              <Tab padding={1.5} width={"10%"}>2</Tab>
+              <Tab padding={1.5} width={"10%"}>3</Tab>
+              <Tab padding={1.5} width={"10%"}>4</Tab>
+              <Tab padding={1.5} width={"10%"}>5</Tab>
+              <Tab padding={1.5} width={"10%"}>6</Tab>
+              <Tab padding={1.5} width={"10%"}>7</Tab>
+              <Tab padding={1.5} width={"10%"}>8</Tab>
+              <Tab padding={1.5} width={"10%"}>9</Tab>
+              <Tab padding={1.5} width={"10%"}>10</Tab>
             </TabList>
           </Tabs>
         </Box>
