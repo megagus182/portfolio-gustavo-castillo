@@ -1,5 +1,4 @@
-import { Box } from "@chakra-ui/react";
-import { Image, Heading } from "@chakra-ui/react";
+import { Image, Heading, Box, useMediaQuery } from "@chakra-ui/react";
 import perfil from "../images/CompletoSinFondo.png";
 import icono1 from "../images/css.png";
 import icono2 from "../images/html.png";
@@ -11,7 +10,14 @@ import icono7 from "../images/sql.png";
 import gif from "../images/scroll-down.gif";
 
 export default function Home() {
+  // const [isLargerThan320] = useMediaQuery("(min-width: 320px)");
+  const [isLargerThan481] = useMediaQuery("(min-width: 481px)");
+  const [isLargerThan769] = useMediaQuery("(min-width: 769px)");
+  // const [isLargerThan1025] = useMediaQuery("(min-width: 1025px)");
+  // const [isLargerThan1280] = useMediaQuery("(min-width: 1200px)");
   return (
+    <Box>
+    {isLargerThan481? 
     <Box width={"100%"} heigh={"100vh"} display={"flex"} className="Home">
       {/* LEFT */}
       <Box
@@ -26,16 +32,27 @@ export default function Home() {
           justifyContent={"center"}
           flexDirection={"column"}
         >
-          <Heading as="h2" size="xl">
+         {  isLargerThan769 ? <Heading as="h2" margin={"10px"} size="xl">
             👋 Hello my name is
-          </Heading>
-          <Heading as="h2" size="2xl">
+          </Heading> :
+           <Heading as="h3" margin={"5px"} size="lg">
+           👋 Hello my name is
+         </Heading> }
+         {isLargerThan769?  <Heading as="h2" margin={"10px"} size="2xl">
             Gustavo Castillo 🧑🏻‍💻
-          </Heading>
-          <Heading marginBottom={"20px"} as="h2" size="xl">
+          </Heading> :
+           <Heading as="h2" margin={"5px"} size="xl">
+           Gustavo Castillo 🧑🏻‍💻
+         </Heading>}
+         {isLargerThan769? <Heading margin={"10px"} as="h2" size="xl">
             FullStack Web Developer
-          </Heading>
+          </Heading> :
+          <Heading margin={"5px"} as="h2" size="lg">
+          FullStack Web Developer
+        </Heading>}
+          
           <Box
+          margin={"10px"}
             justifyContent={"space-evenly"}
             display={"inline-flex"}
             width={"-moz-fit-content"}
@@ -83,8 +100,8 @@ export default function Home() {
               alt="icon"
             />
           </Box>
-          <Image height={"fit-content"} width={"10%"} src={gif} alt="icon" />
         </Box>
+          <Image height={"fit-content"} alignSelf={"flex-end"} paddingBottom={"40px"} width={"10%"} src={gif} alt="icon" />
       </Box>
       {/* RIGHT */}
       <Box width={"50%"} className="rightSideFromHome">
@@ -95,6 +112,99 @@ export default function Home() {
           <Image width={"fit-content"} src={perfil} alt="imgPerfil" />
         </Box>
       </Box>
+    </Box>
+
+    //TAMAÑO
+    : 
+    //TAMAÑO
+    <Box width={"100%"} heigh={"100vh"} flexDirection={"column"} display={"flex"} className="Home">
+      {/* LEFT */}
+      <Box
+        display={"flex"}
+        justifyContent={"center"}
+        height={"50%"}
+        className="leftSideFromHome"
+      >
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          flexDirection={"column"}
+          textAlign={"center"}
+        >
+
+           <Heading as="h4" margin={"10px"} size="lg">
+           👋 Hello my name is
+         </Heading> 
+
+           <Heading as="h2" margin={"10px"} size="xl">
+           Gustavo Castillo 🧑🏻‍💻
+         </Heading>
+
+          <Heading margin={"10px"} as="h2" size="lg">
+          FullStack Web Developer
+        </Heading>
+          
+          <Box
+          margin={"15px"}
+            justifyContent={"space-evenly"}
+            display={"inline-flex"}
+            width={"-moz-fit-content"}
+          >
+            <Image
+              height={"fit-content"}
+              width={"10%"}
+              src={icono1}
+              alt="icon"
+            />
+            <Image
+              height={"fit-content"}
+              width={"10%"}
+              src={icono2}
+              alt="icon"
+            />
+            <Image
+              height={"fit-content"}
+              width={"10%"}
+              src={icono3}
+              alt="icon"
+            />
+            <Image
+              height={"fit-content"}
+              width={"10%"}
+              src={icono4}
+              alt="icon"
+            />
+            <Image
+              height={"fit-content"}
+              width={"10%"}
+              src={icono5}
+              alt="icon"
+            />
+            <Image
+              height={"fit-content"}
+              width={"10%"}
+              src={icono6}
+              alt="icon"
+            />
+            <Image
+              height={"fit-content"}
+              width={"10%"}
+              src={icono7}
+              alt="icon"
+            />
+          </Box>
+        </Box>
+        </Box>
+      {/* RIGHT */}
+      <Box height={"50%"} position={"relative"} className="rightSideFromHome">
+        <Box
+          backgroundColor={"blue.600"}
+          clipPath="polygon(25% 0%, 100% 0, 75% 100%, 0% 100%);"
+        >
+          <Image height={"auto"}  src={perfil} alt="imgPerfil" />
+        </Box>
+      </Box>
+    </Box>}
     </Box>
   );
 }
