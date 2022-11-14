@@ -11,6 +11,7 @@ import {
   Tab,
   Text,
   List,
+  useMediaQuery
 } from "@chakra-ui/react";
 import Food from "../images/Food1.PNG";
 import Food2 from "../images/Food2.PNG";
@@ -31,6 +32,7 @@ import game9 from "../images/Game9.PNG";
 import game10 from "../images/Game10.PNG";
 
 export default function Projects() {
+  const [isLargerThan481] = useMediaQuery("(min-width: 481px)");
   return (
     <Box
       display={"flex"}
@@ -77,6 +79,7 @@ export default function Projects() {
         </List>
       </Text>
       <br></br>
+      {isLargerThan481 ? 
       <SimpleGrid columns={1} spacing={10}>
         <Box height="auto">
           <Tabs defaultIndex={1}>
@@ -128,7 +131,60 @@ export default function Projects() {
           </Tabs>
         </Box>
       </SimpleGrid>
+      //TAMAÑO
+:
+//TAMAÑO
+<SimpleGrid columns={1} spacing={10}>
+        <Box height="auto">
+          <Tabs defaultIndex={1}>
+            <TabPanels textAlign={"-webkit-center"}>
+              <TabPanel>
+                <Image width={"450px"} fit="cover" src={game} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} fit="cover" src={game2} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} fit="cover" src={game3} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} fit="cover" src={game4} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} fit="cover" src={game5} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} fit="cover" src={game6} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} fit="cover" src={game7} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} fit="cover" src={game8} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} fit="cover" src={game9} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} fit="cover" src={game10} />
+              </TabPanel>
+            </TabPanels>
 
+            <TabList width={"100%"}>
+              <Tab width={"18%"}>1</Tab>
+              <Tab width={"18%"}>2</Tab>
+              <Tab width={"18%"}>3</Tab>
+              <Tab width={"18%"}>4</Tab>
+              <Tab width={"18%"}>5</Tab>
+              <Tab width={"18%"}>6</Tab>
+              <Tab width={"18%"}>7</Tab>
+              <Tab width={"18%"}>8</Tab>
+              <Tab width={"18%"}>9</Tab>
+              <Tab width={"18%"}>10</Tab>
+            </TabList>
+          </Tabs>
+        </Box>
+      </SimpleGrid> }
       <Heading margin={"20px"} marginTop={"40px"} as="h2" size="lg">
         <Highlight
           query={["FoodApp"]}
@@ -164,6 +220,7 @@ export default function Projects() {
       </Text>
       <Box bg="tomato" height="auto"></Box>
       <Box height="auto">
+      {isLargerThan481 ? 
         <Tabs defaultIndex={1}>
           <TabPanels textAlign={"-webkit-center"}>
             <TabPanel>
@@ -198,6 +255,42 @@ export default function Projects() {
             <Tab>Detail of Recipe created</Tab>
           </TabList>
         </Tabs>
+        :
+        <Tabs defaultIndex={1}>
+        <TabPanels textAlign={"-webkit-center"}>
+          <TabPanel>
+            <Image width={"440px"} fit="cover" src={Food} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} fit="cover" src={Food2} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} fit="cover" src={Food3} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} fit="cover" src={Food4} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} fit="cover" src={Food5} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} fit="cover" src={Food6} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} fit="cover" src={Food7} />
+          </TabPanel>
+        </TabPanels>
+        <TabList justifyContent={"space-between"} >
+          <Tab>1</Tab>
+          <Tab>2</Tab>
+          <Tab>3</Tab>
+          <Tab>4</Tab>
+          <Tab>5</Tab>
+          <Tab>6</Tab>
+          <Tab>7</Tab>
+        </TabList>
+      </Tabs>
+      }
       </Box>
     </Box>
   );
