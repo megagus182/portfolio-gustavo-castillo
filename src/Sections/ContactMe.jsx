@@ -76,7 +76,7 @@ export default function ContactMe() {
           >
             <Box>
               <Tooltip label="Go to Github" aria-label='A tooltip'>
-              <Circle size="80px" bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"} color="white">
+              <Circle size="80px" bgGradient={"linear(to-l, blue.400, teal.400)"} color="white">
                 <a href="https://github.com/megagus182">
                   <Image
                     height={"fit-content"}
@@ -91,7 +91,7 @@ export default function ContactMe() {
             </Box>
             <Box>
             <Tooltip label="Go to LinkedIn" aria-label='A tooltip'>
-              <Circle size="80px" bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"} color="white">
+              <Circle size="80px" bgGradient={"linear(to-l, blue.400, teal.400)"} color="white">
                 <a href="https://www.linkedin.com/in/gacr1990/">
                   <Image
                     height={"fit-content"}
@@ -107,7 +107,7 @@ export default function ContactMe() {
             </Box>
             <Box>
             <Tooltip label="Download CV" aria-label='A tooltip'>
-              <Circle size="80px" bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"} color="white">
+              <Circle size="80px" bgGradient={"linear(to-l, blue.400, teal.400)"} color="white">
                 <a
                   href={pdf}
                   target="_blank"
@@ -150,7 +150,7 @@ export default function ContactMe() {
           >
             <Box>
             <Tooltip label="Go to Github" aria-label='A tooltip'>
-              <Circle size="80px" bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"}  color="white">
+              <Circle size="80px" bgGradient={"linear(to-l, blue.400, teal.400)"}  color="white">
                 <a href="https://github.com/megagus182">
                   <Image
                     height={"fit-content"}
@@ -165,7 +165,7 @@ export default function ContactMe() {
             </Box>
             <Box>
             <Tooltip label="Go to LinkedIn" aria-label='A tooltip'>
-              <Circle size="80px" bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"} color="white">
+              <Circle size="80px" bgGradient={"linear(to-l, blue.400, teal.400)"} color="white">
                 <a href="https://www.linkedin.com/in/gacr1990/">
                   <Image
                     height={"fit-content"}
@@ -181,7 +181,7 @@ export default function ContactMe() {
             </Box>
             <Box>
             <Tooltip label="Download CV" aria-label='A tooltip'>
-              <Circle size="80px"  bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"}  color="white">
+              <Circle size="80px"  bgGradient={"linear(to-l, blue.400, teal.400)"}  color="white">
                 <a
                   href={pdf}
                   target="_blank"
