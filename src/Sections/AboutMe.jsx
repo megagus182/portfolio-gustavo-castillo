@@ -24,7 +24,7 @@ export default function AboutMe() {
             About Me
           </Heading>
           <br></br>
-          <Text width={"90%"} fontSize="md">
+          <Text width={"100%"} fontSize="md">
             I've always been interested in the world of technology since I was
             little, since I always had a fascination for video games🕹 and
             computers💾, so since high school I took computer courses, in high
@@ -32,7 +32,7 @@ export default function AboutMe() {
             Systems Engineering.
           </Text>
           <br></br>
-          <Text width={"90%"} fontSize="md">
+          <Text width={"100%"} fontSize="md">
             Due to economic situations and lack of opportunities at that time
             🤔, I had to work in other areas outside of mine, such as logistics
             and transportation 🚛 in which, I could develop many Soft Skills,
@@ -64,7 +64,7 @@ export default function AboutMe() {
             About Me
           </Heading>
           <br></br>
-          <Text width={"90%"} fontSize="md">
+          <Text width={"100%"} fontSize="md">
             I've always been interested in the world of technology since I was
             little, since I always had a fascination for video games🕹 and
             computers💾, so since high school I took computer courses, in high
@@ -72,7 +72,7 @@ export default function AboutMe() {
             Systems Engineering.
           </Text>
           <br></br>
-          <Text width={"90%"} fontSize="md">
+          <Text width={"100%"} fontSize="md">
             Due to economic situations and lack of opportunities at that time
             🤔, I had to work in other areas outside of mine, such as logistics
             and transportation 🚛 in which, I could develop many Soft Skills,
@@ -89,7 +89,7 @@ export default function AboutMe() {
         justifyContent={"center"}
         textAlign={"justify"}
       >
-        <Text width={"90%"} fontSize="md">
+        <Text width={"100%"} fontSize="md">
           Now that I gave myself a chance, I took the intensive bootcamp of
           Henry📚, to update and retake what I like, the ⌨programming and
           technology🖱, so I took seriously the career of Full Stack Developer ✍
@@ -98,7 +98,7 @@ export default function AboutMe() {
           following technologies and methodologies💼 :
         </Text>
         <br></br>
-        <Text width={"90%"} fontSize="md">
+        <Text width={"100%"} fontSize="md">
           JavaScript | React | Redux | HTML5 | CSS3 | NodeJs | SQL | Express |
           Scrum | GIT | Postman | Heroku | Netlify |.
         </Text>

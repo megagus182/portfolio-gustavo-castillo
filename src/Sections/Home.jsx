@@ -1,4 +1,4 @@
-import { Image, Heading, Box, useMediaQuery } from "@chakra-ui/react";
+import { Image, Heading, Box, useMediaQuery, Text } from "@chakra-ui/react";
 import perfil from "../images/CompletoSinFondo.png";
 import icono1 from "../images/css.png";
 import icono2 from "../images/html.png";
@@ -26,6 +26,7 @@ export default function Home() {
         width={"50%"}
         marginLeft={"20px"}
         className="leftSideFromHome"
+        textAlign={"center"}
       >
         <Box
           display={"flex"}
@@ -33,17 +34,31 @@ export default function Home() {
           flexDirection={"column"}
         >
          {  isLargerThan769 ? <Heading as="h2" margin={"10px"} size="xl">
-            👋 Hello my name is
+            👋 Hello, my name is
           </Heading> :
            <Heading as="h3" margin={"5px"} size="lg">
-           👋 Hello my name is
+           👋 Hello, my name is
          </Heading> }
-         {isLargerThan769?  <Heading as="h2" margin={"10px"} size="2xl">
-            Gustavo Castillo 🧑🏻‍💻
-          </Heading> :
-           <Heading as="h2" margin={"5px"} size="xl">
-           Gustavo Castillo 🧑🏻‍💻
-         </Heading>}
+         {isLargerThan769? <Box>
+          <Text
+  bgGradient='linear(to-l, blue.600, teal.400)'
+  bgClip='text'
+  fontSize='6xl'
+  fontWeight='extrabold'
+>
+Gustavo Castillo  
+</Text><Text fontSize='4xl'>🧑🏻‍💻</Text>
+         </Box>  :
+           <Box>
+           <Text
+   bgGradient='linear(to-l, blue.600, teal.400)'
+   bgClip='text'
+   fontSize='4xl'
+   fontWeight='extrabold'
+ >
+ Gustavo Castillo  
+ </Text><Text fontSize='4xl'>🧑🏻‍💻</Text>
+          </Box>}
          {isLargerThan769? <Heading margin={"10px"} as="h2" size="xl">
             FullStack Web Developer
           </Heading> :
@@ -136,9 +151,16 @@ export default function Home() {
            👋 Hello my name is
          </Heading> 
 
-           <Heading as="h2" margin={"10px"} size="xl">
-           Gustavo Castillo 🧑🏻‍💻
-         </Heading>
+           <Box>
+          <Text
+  bgGradient='linear(to-l, blue.600, teal.400)'
+  bgClip='text'
+  fontSize='3xl'
+  fontWeight='extrabold'
+>
+Gustavo Castillo  
+</Text><Text fontSize='3xl'>🧑🏻‍💻</Text>
+         </Box>
 
           <Heading margin={"10px"} as="h2" size="lg">
           FullStack Web Developer

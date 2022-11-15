@@ -1,4 +1,4 @@
-import { Box, Image, Heading, Circle, Button } from "@chakra-ui/react";
+import { Box, Image, Heading, Circle, Button, useMediaQuery, Tooltip  } from "@chakra-ui/react";
 import github from "../images/github.png";
 import linkedin from "../images/linkedin.png";
 import pdf from "../images/CVGustavoCastillo.pdf";
@@ -16,17 +16,18 @@ import {
 } from "@chakra-ui/react";
 
 export default function ContactMe() {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(" ");
   const handleInputChange = (e) => setInput(e.target.value);
-  const [inputName, setInputName] = useState("");
+  const [inputName, setInputName] = useState(" ");
   const handleInputNameChange = (e) => setInputName(e.target.value);
-  const [inputMessage, setInputMessage] = useState("");
+  const [inputMessage, setInputMessage] = useState(" ");
   const handleInputMessageChange = (e) => setInputMessage(e.target.value);
   const isEmailError = input === "";
   const isNameError = inputName === "";
   const isMessageError = inputMessage === "";
   const form = useRef();
   const toast = useToast()
+  const [isLargerThan481] = useMediaQuery("(min-width: 481px)");
 
   function sendEmail(e) {
     e.preventDefault();
@@ -56,10 +57,12 @@ export default function ContactMe() {
       </Heading>
       <Box width={"100%"} heigh={"100vh"} display={"flex"} className="Home">
         {/* LEFT */}
+        {isLargerThan481 ? 
         <Box
           display={"flex"}
           flexDirection={"column"}
           justifyContent={"center"}
+          textAlign={"center"}
           width={"50%"}
           marginLeft={"20px"}
           className="leftSideFromHome"
@@ -72,7 +75,8 @@ export default function ContactMe() {
             flexFlow={"wrap"}
           >
             <Box>
-              <Circle size="80px" bg="blue.600" color="white">
+              <Tooltip label="Go to Github" aria-label='A tooltip'>
+              <Circle size="80px" bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"} color="white">
                 <a href="https://github.com/megagus182">
                   <Image
                     height={"fit-content"}
@@ -82,10 +86,12 @@ export default function ContactMe() {
                   />
                 </a>
               </Circle>
+              </Tooltip>
               Github
             </Box>
             <Box>
-              <Circle size="80px" bg="blue.600" color="white">
+            <Tooltip label="Go to LinkedIn" aria-label='A tooltip'>
+              <Circle size="80px" bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"} color="white">
                 <a href="https://www.linkedin.com/in/gacr1990/">
                   <Image
                     height={"fit-content"}
@@ -96,10 +102,12 @@ export default function ContactMe() {
                   />
                 </a>
               </Circle>
+              </Tooltip>
               LinkedIn
             </Box>
             <Box>
-              <Circle size="80px" bg="blue.600" color="white">
+            <Tooltip label="Download CV" aria-label='A tooltip'>
+              <Circle size="80px" bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"} color="white">
                 <a
                   href={pdf}
                   target="_blank"
@@ -115,10 +123,85 @@ export default function ContactMe() {
                   />
                 </a>
               </Circle>
+              </Tooltip>
               Curriculum
             </Box>
           </Box>
         </Box>
+        //TAMAÑO
+          : 
+          //TAMAÑO
+          <Box
+          display={"flex"}
+          flexDirection={"row"}
+          justifyContent={"center"}
+          width={"50%"}
+          marginLeft={"20px"}
+          textAlign={"center"}
+          className="leftSideFromHome"
+        >
+          {/* ICONOS */}
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            justifyContent={"space-evenly"}
+            flexFlow={"column"}
+            alignItems={"center"}
+          >
+            <Box>
+            <Tooltip label="Go to Github" aria-label='A tooltip'>
+              <Circle size="80px" bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"}  color="white">
+                <a href="https://github.com/megagus182">
+                  <Image
+                    height={"fit-content"}
+                    width={"100%"}
+                    src={github}
+                    alt="github"
+                  />
+                </a>
+              </Circle>
+              </Tooltip>
+              Github
+            </Box>
+            <Box>
+            <Tooltip label="Go to LinkedIn" aria-label='A tooltip'>
+              <Circle size="80px" bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"} color="white">
+                <a href="https://www.linkedin.com/in/gacr1990/">
+                  <Image
+                    height={"fit-content"}
+                    width={"100%"}
+                    src={linkedin}
+                    alt="linkedin"
+                    borderRadius={"50px"}
+                  />
+                </a>
+              </Circle>
+              </Tooltip>
+              LinkedIn
+            </Box>
+            <Box>
+            <Tooltip label="Download CV" aria-label='A tooltip'>
+              <Circle size="80px"  bg={"radial-gradient(circle, rgba(57,207,182,1) 0%, rgba(29,144,204,1) 100%, rgba(255,255,255,1) 100%)"}  color="white">
+                <a
+                  href={pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="CVGustavoCastillo.pdf"
+                >
+                  <Image
+                    borderRadius={"50px"}
+                    height={"fit-content"}
+                    width={"100%"}
+                    src={cv}
+                    alt="cv"
+                  />
+                </a>
+              </Circle>
+              </Tooltip>
+              Curriculum
+            </Box>
+          </Box>
+        </Box>}
         {/* FORMULARIO */}
         <Box
           width={"50%"}
@@ -185,6 +268,7 @@ export default function ContactMe() {
             </form>
           </Box>
         </Box>
+          
       </Box>
     </Box>
   );
