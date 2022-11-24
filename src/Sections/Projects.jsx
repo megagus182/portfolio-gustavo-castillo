@@ -83,40 +83,7 @@ export default function Projects() {
       <SimpleGrid columns={1} spacing={10}>
         <Box height="auto">
           <Tabs defaultIndex={1}>
-            <TabPanels textAlign={"-webkit-center"}>
-              <TabPanel>
-                <Image width={"680px"} fit="cover" src={game} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"680px"} fit="cover" src={game2} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"680px"} fit="cover" src={game3} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"680px"} fit="cover" src={game4} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"680px"} fit="cover" src={game5} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"300px"} fit="cover" src={game6} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"480px"} fit="cover" src={game7} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"680px"} fit="cover" src={game8} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"680px"} fit="cover" src={game9} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"680px"} fit="cover" src={game10} />
-              </TabPanel>
-            </TabPanels>
-
-            <TabList width={"50%"}>
+          <TabList width={"50%"}>
               <Tab width={"30%"}>Landing</Tab>
               <Tab width={"30%"}>Home</Tab>
               <Tab width={"30%"}>Detail</Tab>
@@ -128,6 +95,40 @@ export default function Projects() {
               <Tab width={"30%"}>DarkMode</Tab>
               <Tab width={"30%"}>Footer</Tab>
             </TabList>
+            <TabPanels textAlign={"-webkit-center"}>
+              <TabPanel>
+                <Image width={"680px"} borderRadius={"20px"} fit="cover" src={game} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"680px"} borderRadius={"15px"} fit="cover" src={game2} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"680px"} borderRadius={"15px"} fit="cover" src={game3} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"680px"} borderRadius={"15px"} fit="cover" src={game4} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"680px"} borderRadius={"15px"} fit="cover" src={game5} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"300px"} borderRadius={"15px"} fit="cover" src={game6} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"480px"} borderRadius={"15px"} fit="cover" src={game7} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"680px"} borderRadius={"15px"} fit="cover" src={game8} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"680px"} borderRadius={"15px"} fit="cover" src={game9} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"680px"} borderRadius={"15px"} fit="cover" src={game10} />
+              </TabPanel>
+            </TabPanels>
+
+            
           </Tabs>
         </Box>
       </SimpleGrid>
@@ -137,40 +138,7 @@ export default function Projects() {
 <SimpleGrid columns={1} spacing={10}>
         <Box height="auto">
           <Tabs defaultIndex={1}>
-            <TabPanels textAlign={"-webkit-center"}>
-              <TabPanel>
-                <Image width={"450px"} fit="cover" src={game} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"450px"} fit="cover" src={game2} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"450px"} fit="cover" src={game3} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"450px"} fit="cover" src={game4} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"450px"} fit="cover" src={game5} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"450px"} fit="cover" src={game6} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"450px"} fit="cover" src={game7} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"450px"} fit="cover" src={game8} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"450px"} fit="cover" src={game9} />
-              </TabPanel>
-              <TabPanel>
-                <Image width={"450px"} fit="cover" src={game10} />
-              </TabPanel>
-            </TabPanels>
-
-            <TabList width={"100%"}>
+          <TabList width={"100%"}>
               <Tab padding={1.5} width={"10%"}>1</Tab>
               <Tab padding={1.5} width={"10%"}>2</Tab>
               <Tab padding={1.5} width={"10%"}>3</Tab>
@@ -182,6 +150,40 @@ export default function Projects() {
               <Tab padding={1.5} width={"10%"}>9</Tab>
               <Tab padding={1.5} width={"10%"}>10</Tab>
             </TabList>
+            <TabPanels textAlign={"-webkit-center"}>
+              <TabPanel>
+                <Image width={"450px"} borderRadius={"15px"} fit="cover" src={game} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} borderRadius={"15px"} fit="cover" src={game2} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} borderRadius={"15px"} fit="cover" src={game3} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} borderRadius={"15px"} fit="cover" src={game4} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} borderRadius={"15px"} fit="cover" src={game5} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} borderRadius={"15px"} fit="cover" src={game6} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} borderRadius={"15px"} fit="cover" src={game7} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} borderRadius={"15px"} fit="cover" src={game8} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} borderRadius={"15px"} fit="cover" src={game9} />
+              </TabPanel>
+              <TabPanel>
+                <Image width={"450px"} borderRadius={"15px"} fit="cover" src={game10} />
+              </TabPanel>
+            </TabPanels>
+
+            
           </Tabs>
         </Box>
       </SimpleGrid> }
@@ -222,29 +224,6 @@ export default function Projects() {
       <Box height="auto">
       {isLargerThan481 ? 
         <Tabs defaultIndex={1}>
-          <TabPanels textAlign={"-webkit-center"}>
-            <TabPanel>
-              <Image width={"680px"} fit="cover" src={Food} />
-            </TabPanel>
-            <TabPanel>
-              <Image width={"680px"} fit="cover" src={Food2} />
-            </TabPanel>
-            <TabPanel>
-              <Image width={"680px"} fit="cover" src={Food3} />
-            </TabPanel>
-            <TabPanel>
-              <Image width={"300px"} fit="cover" src={Food4} />
-            </TabPanel>
-            <TabPanel>
-              <Image width={"680px"} fit="cover" src={Food5} />
-            </TabPanel>
-            <TabPanel>
-              <Image width={"580px"} fit="cover" src={Food6} />
-            </TabPanel>
-            <TabPanel>
-              <Image width={"680px"} fit="cover" src={Food7} />
-            </TabPanel>
-          </TabPanels>
           <TabList>
             <Tab>LandingPage</Tab>
             <Tab>Home</Tab>
@@ -254,33 +233,34 @@ export default function Projects() {
             <Tab>Create Success</Tab>
             <Tab>Detail of Recipe created</Tab>
           </TabList>
+          <TabPanels textAlign={"-webkit-center"}>
+            <TabPanel>
+              <Image width={"680px"} borderRadius={"15px"} fit="cover" src={Food} />
+            </TabPanel>
+            <TabPanel>
+              <Image width={"680px"} borderRadius={"15px"} fit="cover" src={Food2} />
+            </TabPanel>
+            <TabPanel>
+              <Image width={"680px"} borderRadius={"15px"} fit="cover" src={Food3} />
+            </TabPanel>
+            <TabPanel>
+              <Image width={"300px"} borderRadius={"15px"} fit="cover" src={Food4} />
+            </TabPanel>
+            <TabPanel>
+              <Image width={"680px"} borderRadius={"15px"} fit="cover" src={Food5} />
+            </TabPanel>
+            <TabPanel>
+              <Image width={"580px"} borderRadius={"15px"} fit="cover" src={Food6} />
+            </TabPanel>
+            <TabPanel>
+              <Image width={"680px"} borderRadius={"15px"} fit="cover" src={Food7} />
+            </TabPanel>
+          </TabPanels>
+          
         </Tabs>
         :
         <Tabs defaultIndex={1}>
-        <TabPanels textAlign={"-webkit-center"}>
-          <TabPanel>
-            <Image width={"440px"} fit="cover" src={Food} />
-          </TabPanel>
-          <TabPanel>
-            <Image width={"440px"} fit="cover" src={Food2} />
-          </TabPanel>
-          <TabPanel>
-            <Image width={"440px"} fit="cover" src={Food3} />
-          </TabPanel>
-          <TabPanel>
-            <Image width={"440px"} fit="cover" src={Food4} />
-          </TabPanel>
-          <TabPanel>
-            <Image width={"440px"} fit="cover" src={Food5} />
-          </TabPanel>
-          <TabPanel>
-            <Image width={"440px"} fit="cover" src={Food6} />
-          </TabPanel>
-          <TabPanel>
-            <Image width={"440px"} fit="cover" src={Food7} />
-          </TabPanel>
-        </TabPanels>
-        <TabList justifyContent={"space-between"} >
+           <TabList justifyContent={"space-between"} >
           <Tab>1</Tab>
           <Tab>2</Tab>
           <Tab>3</Tab>
@@ -289,6 +269,30 @@ export default function Projects() {
           <Tab>6</Tab>
           <Tab>7</Tab>
         </TabList>
+        <TabPanels textAlign={"-webkit-center"}>
+          <TabPanel>
+            <Image width={"440px"} borderRadius={"15px"} fit="cover" src={Food} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} borderRadius={"15px"} fit="cover" src={Food2} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} borderRadius={"15px"} fit="cover" src={Food3} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} borderRadius={"15px"} fit="cover" src={Food4} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} borderRadius={"15px"} fit="cover" src={Food5} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} borderRadius={"15px"} fit="cover" src={Food6} />
+          </TabPanel>
+          <TabPanel>
+            <Image width={"440px"} borderRadius={"15px"} fit="cover" src={Food7} />
+          </TabPanel>
+        </TabPanels>
+       
       </Tabs>
       }
       </Box>

@@ -1,4 +1,4 @@
-import { Box, Image, Heading, Circle, Button, useMediaQuery, Tooltip  } from "@chakra-ui/react";
+import { Box, Image, Heading, Circle, Button, useMediaQuery, Tooltip, useColorModeValue, Text } from "@chakra-ui/react";
 import github from "../images/github.png";
 import linkedin from "../images/linkedin.png";
 import pdf from "../images/CVGustavoCastillo.pdf";
@@ -16,11 +16,11 @@ import {
 } from "@chakra-ui/react";
 
 export default function ContactMe() {
-  const [input, setInput] = useState(" ");
+  const [input, setInput] = useState("");
   const handleInputChange = (e) => setInput(e.target.value);
-  const [inputName, setInputName] = useState(" ");
+  const [inputName, setInputName] = useState("");
   const handleInputNameChange = (e) => setInputName(e.target.value);
-  const [inputMessage, setInputMessage] = useState(" ");
+  const [inputMessage, setInputMessage] = useState("");
   const handleInputMessageChange = (e) => setInputMessage(e.target.value);
   const isEmailError = input === "";
   const isNameError = inputName === "";
@@ -49,10 +49,12 @@ export default function ContactMe() {
         })
       });
   }
+  const bg = useColorModeValue("blue.600", 'blackAlpha.900')
+  const bgc = useColorModeValue("white", 'red')
 
   return (
-    <Box>
-      <Heading textAlign={"center"} marginTop={"20px"} as="h2" size="lg">
+    <Box backgroundColor={bg}>
+      <Heading textAlign={"center"} color={"white"} paddingTop={"20px"} marginTop={"20px"} as="h2" size="lg">
         Contact Me
       </Heading>
       <Box width={"100%"} heigh={"100vh"} display={"flex"} className="Home">
@@ -75,7 +77,7 @@ export default function ContactMe() {
             flexFlow={"wrap"}
           >
             <Box>
-              <Tooltip label="Go to Github" aria-label='A tooltip'>
+              <Tooltip label="Go to my Github" aria-label='A tooltip'>
               <Circle size="80px" bgGradient={"linear(to-l, blue.400, teal.400)"} color="white">
                 <a href="https://github.com/megagus182">
                   <Image
@@ -87,10 +89,10 @@ export default function ContactMe() {
                 </a>
               </Circle>
               </Tooltip>
-              Github
+             <Text color={"white"}>Github</Text> 
             </Box>
             <Box>
-            <Tooltip label="Go to LinkedIn" aria-label='A tooltip'>
+            <Tooltip label="Go to my LinkedIn" aria-label='A tooltip'>
               <Circle size="80px" bgGradient={"linear(to-l, blue.400, teal.400)"} color="white">
                 <a href="https://www.linkedin.com/in/gacr1990/">
                   <Image
@@ -103,7 +105,7 @@ export default function ContactMe() {
                 </a>
               </Circle>
               </Tooltip>
-              LinkedIn
+              <Text color={"white"}>LinkedIn</Text>
             </Box>
             <Box>
             <Tooltip label="Download CV" aria-label='A tooltip'>
@@ -124,7 +126,7 @@ export default function ContactMe() {
                 </a>
               </Circle>
               </Tooltip>
-              Curriculum
+              <Text color={"white"}>Curriculum</Text>
             </Box>
           </Box>
         </Box>
@@ -149,7 +151,7 @@ export default function ContactMe() {
             alignItems={"center"}
           >
             <Box>
-            <Tooltip label="Go to Github" aria-label='A tooltip'>
+            <Tooltip label="Go to my Github" aria-label='A tooltip'>
               <Circle size="80px" bgGradient={"linear(to-l, blue.400, teal.400)"}  color="white">
                 <a href="https://github.com/megagus182">
                   <Image
@@ -164,7 +166,7 @@ export default function ContactMe() {
               Github
             </Box>
             <Box>
-            <Tooltip label="Go to LinkedIn" aria-label='A tooltip'>
+            <Tooltip label="Go to my LinkedIn" aria-label='A tooltip'>
               <Circle size="80px" bgGradient={"linear(to-l, blue.400, teal.400)"} color="white">
                 <a href="https://www.linkedin.com/in/gacr1990/">
                   <Image
@@ -219,14 +221,14 @@ export default function ContactMe() {
                 {!isNameError ? (
                 <FormHelperText>Enter your Name please.</FormHelperText>
                 ) : (
-                  <FormHelperText color={"red"}>
+                  <FormHelperText color={bgc}>
                   Name is required.
                 </FormHelperText>
               )}
               <FormLabel>Email</FormLabel>
                 <Input
                   type="email"
-                  placeholder="Email"
+                  placeholder="email"
                   name="email"
                   value={input}
                   onChange={handleInputChange}
@@ -236,7 +238,7 @@ export default function ContactMe() {
                     Enter the email you'd like to receive the answer.
                   </FormHelperText>
                 ) : (
-                  <FormHelperText color={"red"}>
+                  <FormHelperText color={bgc}>
                     Email is required.
                   </FormHelperText>
                 )}
@@ -254,7 +256,7 @@ export default function ContactMe() {
                   Please write a message to contact me.
                 </FormHelperText>
                  ) : (
-                  <FormHelperText color={"red"}>
+                  <FormHelperText color={bgc}>
                   Message is required.
                 </FormHelperText>
               )}
